@@ -9,7 +9,8 @@ DynamoDbLocal.configureInstaller({
 module.exports = {
   startDynamoDbLocal: (port, tableName) => {
     return new Promise((resolve, reject) => {
-      DynamoDbLocal.launch(port)
+        console.log("Db_dir: ",process.env.DB_DIR)
+      DynamoDbLocal.launch(port, process.env.DB_DIR)
         .then((_) => {
           const dynamodb = new AWS.DynamoDB();
 

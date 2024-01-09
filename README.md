@@ -29,8 +29,8 @@ the code from GitHub beforehand and then run on localhost as per instructions in
 Important design points
 -----------------------
 
-* It is important that when the user is idle, the digram shown is without controls.
-This is so that when the digram is edited, it looks clean and pretty when just viewed. And we don't want to complicate the UI with an "enter view mode" concept.
+* It is important that when the user is idle, the diagram shown is without controls.
+This is so that when the diagram is edited, it looks clean and pretty when just viewed. And we don't want to complicate the UI with an "enter view mode" concept.
 
 
 Roadmap

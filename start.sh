@@ -9,7 +9,11 @@ trap 'kill -TERM 0' EXIT
 source local.env.sh
 
 # Start backend dev server
-nodemon --watch src-backend --watch src-backend-localhost src-backend-mock/api-server-localhost.js &
+echo starting mock backend
+node src-backend-mock/api-server-localhost.js &
 
+echo starting ui server
 # Start front end dev server and block for Ctrl-C
-PORT=$WEB_APP_DEV_SERVER_PORT REACT_APP_API_SERVER=http://localhost:$API_SERVER_PORT react-scripts start
+PORT=$WEB_APP_DEV_SERVER_PORT REACT_APP_API_SERVER=http://localhost:$API_SERVER_PORT npx react-scripts start
+
+echo server started!
